@@ -1,0 +1,11 @@
+build/
+dist/
+vendor/
+local/
+bin/
+logs/
+
+.env
+.DS_Store
+.idea
+.log
