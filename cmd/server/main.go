@@ -11,7 +11,17 @@ import (
 	"google.golang.org/grpc"
 )
 
+// This is the main function for the server
+// It creates a new listener on port 50051
+// It then creates a new gRPC server
+// It then creates a new user repository and user service
+// It then creates a new user handler
+// It then registers the user service with the gRPC server
+// It then logs a message to the console indicating that the server is running
+// It then serves the gRPC server on the listener
+// It then logs a message to the console indicating that the server failed to serve
 func main() {
+	// Create a new listener on port 50051
 	lis, err := net.Listen("tcp", ":50051")
 	if err != nil {
 		log.Fatalf("failed to listen: %v", err)

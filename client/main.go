@@ -11,8 +11,14 @@ import (
 	"google.golang.org/grpc/credentials/insecure"
 )
 
+// This is the main function for the client
+// It creates a new connection to the server and a new client
+// It then creates a new context with a timeout of 500 milliseconds
+// It then calls the GetUser method on the client
+// It then prints the response
 func main() {
 
+	// Create a new connection to the server
 	conn, err := grpc.NewClient(
 		"localhost:50051",
 		grpc.WithTransportCredentials(insecure.NewCredentials()),
